@@ -1,10 +1,36 @@
 1. Write a blog on Difference between HTTP1.1 vs HTTP2:
 
-The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
-  1. It's a binary protocol rather than a text protocol. It can't be read and created manually. Despite this hurdle, it allows for the implementation of improved optimization techniques.
-  2. It's a multiplexed protocol. Parallel requests can be made over the same connection, removing the constraints of the HTTP/1.x protocol.
-  3. It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
-  4. It allows a server to populate data in a client cache through a mechanism called the server push.
+HTTP stands for Hypertext Transfer Protocol. It is an application protocol used for transmitting data over the internet. 
+HTTP is the foundation of data communication for the World Wide Web, and it defines how web browsers and servers communicate with each other.
+When a user enters a URL (Uniform Resource Locator) into their web browser, the browser sends an HTTP request to the web server hosting the website. The server then responds with an HTTP response, which includes the data requested by the browser, such as the HTML, CSS, JavaScript, and media files needed to display the web page.
+HTTP is a stateless protocol, which means that each request from the browser to the server is independent and does not maintain any information about previous requests. To maintain stateful communication, web developers can use cookies or other mechanisms to store and retrieve information about the user and their interactions with the website.
+The current version of HTTP is HTTP/2, which was released in 2015 and provides significant improvements over its predecessor, HTTP/1.1. HTTP/2 offers faster page loading times, improved security, and better resource utilization. It achieves this through features such as multiplexing, header compression, server push, and prioritization.
+HTTP, or Hypertext Transfer Protocol, is a set of rules that govern how web servers and web browsers communicate with each other. It is the foundation of the World Wide Web. HTTP/1.1 has been the standard protocol for web communication for over 20 years, but recently HTTP/2 has been introduced as an upgrade. In this blog post, we will discuss the differences between HTTP/1.1 and HTTP/2.
+
+Binary vs Text Protocol
+HTTP/1.1 is a text-based protocol, which means that the request and response messages are in plain text. 
+However, HTTP/2 is a binary protocol, which means that the messages are in binary format. 
+This means that HTTP/2 is more efficient at transferring data than HTTP/1.1.
+
+Multiplexing
+HTTP/1.1 only allows one request to be sent over a single connection at a time. 
+This means that if a web page has multiple resources, such as images and scripts, the browser has to send multiple requests to the server, resulting in slower page load times. On the other hand, HTTP/2 supports multiplexing, which means that multiple requests can be sent over a single connection at the same time. 
+This results in faster page load times.
+
+Server Push
+HTTP/2 also introduces server push, which allows the server to send resources to the client without the client requesting them. 
+For example, if the server knows that the client will need a specific resource, such as an image, it can push that resource to the client before the client requests it. 
+This can further reduce page load times.
+
+Header Compression
+HTTP/1.1 headers are sent with every request and response, which can result in a significant amount of data being sent over the network. 
+HTTP/2 introduces header compression, which reduces the size of the headers, resulting in faster page load times.
+
+Security
+HTTP/1.1 does not have any built-in security features. 
+However, HTTPS can be used to provide security. On the other hand, HTTP/2 requires the use of HTTPS, which means that all communication between the server and the client is encrypted, providing better security.
+
+In conclusion, HTTP/2 is a significant upgrade over HTTP/1.1. It is more efficient, faster, and more secure. However, not all web servers and browsers support HTTP/2 yet, so it may take some time before it becomes the standard protocol for web communication
 
 2. Write a blog about objects and its internal representation in Javascript
 
